@@ -1,0 +1,11 @@
+pyproject.toml
+app/__init__.py
+app/cli.py
+app/database.py
+app/main.py
+app/models.py
+info_2602_fastapi_lab_2.egg-info/PKG-INFO
+info_2602_fastapi_lab_2.egg-info/SOURCES.txt
+info_2602_fastapi_lab_2.egg-info/dependency_links.txt
+info_2602_fastapi_lab_2.egg-info/requires.txt
+info_2602_fastapi_lab_2.egg-info/top_level.txt

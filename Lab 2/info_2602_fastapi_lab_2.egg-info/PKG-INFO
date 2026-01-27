@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: info-2602-fastapi-lab-2
+Version: 0.0.1
+Summary: Lab 2 for info 2602
+Author-email: Kwasi Edwards <kwasiedwards@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi[standard]
+Requires-Dist: httpx
+Requires-Dist: pwdlib
+Requires-Dist: pytest-asyncio
+Requires-Dist: pytest
+Requires-Dist: ruff
+Requires-Dist: sqlmodel
+Requires-Dist: typer
+Requires-Dist: uvicorn[standard]
+Provides-Extra: dev
