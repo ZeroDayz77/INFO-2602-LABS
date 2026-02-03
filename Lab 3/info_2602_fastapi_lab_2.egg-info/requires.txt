@@ -1,0 +1,11 @@
+fastapi[standard]
+httpx
+pwdlib
+pytest-asyncio
+pytest
+ruff
+sqlmodel
+typer
+uvicorn[standard]
+
+[dev]
