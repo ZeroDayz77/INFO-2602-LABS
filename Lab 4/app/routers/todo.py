@@ -48,7 +48,7 @@ def assign_category_to_todo(id:int, cat_id:int, db:SessionDep, user:AuthDep):
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Unauthorized",
         )
-    todo.categories == category
+    todo.categories.append(category)
     try:
         db.add(todo)
         db.commit()
@@ -103,7 +103,7 @@ def update_todo(id:int, db:SessionDep, user:AuthDep):
 @todo_router.delete('/todo/{id}/category/{cat_id}', status_code=status.HTTP_200_OK)
 def update_todo_category(id:int, cat_id:int, db:SessionDep, user:AuthDep):
 
-    todo_with_category = db.exec(select(Todo).where(Todo.id==id, Todo.user_id==user.id, TodoCategory.id == cat_id)).one_or_none()
+    todo_with_category = db.exec(select(Todo).where(Todo.id==id, Todo.user_id==user.id, TodoCategory.category_id == cat_id)).one_or_none()
     if not todo_with_category:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

@@ -8,7 +8,7 @@ from fastapi import status
 category_router = APIRouter(tags=["Category Management"])
 
 @category_router.post("/category", response_model=CategoryResponse)
-def create_category(db:SessionDep, user:AuthDep, category_data:TodoCreate):
+def create_category(db:SessionDep, user:AuthDep, category_data:CategoryCreate):
     category = Category(text=category_data.text, user_id=user.id)
     try:
         db.add(category)
