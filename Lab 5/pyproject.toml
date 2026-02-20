@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "info-2602-fastapi-l5-templating"
+version = "0.0.1"
+description = "Week 5 Lab on Templating"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Kwasi Edwards", email = "kwasiedwards@gmail.com" }
+]
+dependencies = [
+    "fastapi[standard]",
+    "httpx",
+    "itsdangerous",
+    "jinja2",
+    "pwdlib[argon2]",
+    "pyjwt",
+    "pytest-asyncio",
+    "pytest",
+    "ruff",
+    "sqlmodel",
+    "tabulate",
+    "typer",
+    "uvicorn[standard]",
+]
+[project.optional-dependencies]
+dev = [
+
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.setuptools]
+packages = ["app"]
