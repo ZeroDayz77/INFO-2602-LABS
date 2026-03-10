@@ -1,5 +1,5 @@
 // replace with your fork of the completed lab 3 repl https://replit.com/@Snickdx/INFO-2602-Lab-3-Completed
-const server = "https://9d12af7b-a3db-40f8-874b-72cc4ceba9dc-00-1mhomfu4s2k6l.riker.replit.dev";
+const server = "http://127.0.0.1:10000";
 
 function toast(message){
   M.toast({html: message});

@@ -16,12 +16,12 @@ async function signup(event){
   //send data to application server
   let result = await sendRequest(`${server}/signup`, 'POST', data);
   
-  if('error' in result){
-    toast("Loggin Failed: "+result['error']);//show error message
+  if('detail' in result){
+    toast("Register Failed: "+result['detail']);//show error message
   }else{
-    toast("Logged Successful");
+    toast("Register Successful");
     window.location.href= 'index.html';//redirect the page
   }
 }
-
+//attach signup to submit event of form
 document.forms['signUpForm'].addEventListener('submit', signup);
