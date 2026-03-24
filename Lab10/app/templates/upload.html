@@ -1,0 +1,28 @@
+{% extends "authenticated-base.html" %} {% block external_js %} {% endblock %}
+{% block subpage_content %}
+
+<form action="/upload" enctype="multipart/form-data" method="post">
+    <input name="files" type="file" multiple />
+    <input type="submit" />
+</form>
+
+<div class="container mt-4">
+    <h2>Uploaded Files</h2>
+    <ul>
+        {% for file in files %}
+        <li>
+            <img
+                src="{{ url_for('upload.view_file', filename=file) }}"
+                alt="{{ file }}"
+                width="100"
+            />
+            -
+            <a href="{{ url_for('upload.remove_file', filename=file) }}"
+                >Delete</a
+            >
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
